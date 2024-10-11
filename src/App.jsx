@@ -1,12 +1,11 @@
-import { Home } from "./Home";
-import { Navbar } from "./Navbar";
-
+import { Navbar } from "./layout/navbar/Navbar";
+import { Footer } from "./layout/footer";
 function App() {
-  return(
+  return (
     <div>
-    <Home />
-    <Navbar/>
+      <Navbar />
+      <Footer />
     </div>
-  )
+  );
 }
 export default App;

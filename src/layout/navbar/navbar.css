@@ -1,0 +1,7 @@
+.conteiner-navbar {
+  color: white;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
