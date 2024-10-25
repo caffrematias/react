@@ -1,10 +1,13 @@
 import { Navbar } from "./layout/navbar/Navbar";
-import { Footer } from "./layout/footer";
+
+import { ItemListConteiner } from "./pages/itemListConteiner/itemListConteiner";
+import { Counter } from "./common/counter/counter";
 function App() {
   return (
     <div>
       <Navbar />
-      <Footer />
+      <ItemListConteiner />
+      <Counter />
     </div>
   );
 }
