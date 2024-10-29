@@ -1,9 +1,12 @@
 import { CartWidget } from "../../common/cartWidget/CartWidget";
 import "./navbar.css";
-export const Navbar = () => {
+export const Navbar = ({ darkMode }) => {
   return (
     <>
-      <div className="conteiner-navbar">
+      <div
+        className="conteiner-navbar"
+        style={{ backgroundColor: darkMode ? "blue" : "black" }}
+      >
         <img
           src="https://res.cloudinary.com/dep7mdkof/image/upload/v1728667236/logo_wyaloh.jpg"
           alt="Logo"
