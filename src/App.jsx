@@ -8,6 +8,10 @@ function App() {
   const cambiarModo = () => {
     setDarkMode(!darkMode);
   };
+  // const [entraEnElDom, setEntraEnElDom] = useState(false);
+  // const montarOdesmontar = () => {
+  //  setEntraEnElDom(!entraEnElDom);
+
   return (
     <>
       <button onClick={cambiarModo}>Cambiar modo</button>
