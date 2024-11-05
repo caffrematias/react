@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { Card } from "../../common/card/Card";
 import { products } from "../../common/products";
+import { useState } from "react";
 //let task = new Promise((res, rej) => {});
 let myProductsPromise = new Promise((res, rej) => {
   if (products.length === 0) {
@@ -9,17 +11,26 @@ let myProductsPromise = new Promise((res, rej) => {
   }
 });
 export const ItemListConteiner = ({ darkMode }) => {
-  myProductsPromise
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-
+  const [myProducts, setMyProducts] = useState([]);
+  useEffect(() => {
+    myProductsPromise
+      .then((data) => {
+        setMyProducts(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
-    <div style={{ backgroundColor: darkMode ? "black" : "white" }}>
-      <Card title="Nike" price={1200} stock={5} />
+    <div className="il-container">
+      {myProducts.map((prod) => {
+        <Card
+          key={prod.id}
+          title={prod.title}
+          price={prod.price}
+          stock={prod.stock}
+        />;
+      })}
     </div>
   );
 };
