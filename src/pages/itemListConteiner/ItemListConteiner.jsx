@@ -23,14 +23,15 @@ export const ItemListConteiner = ({ darkMode }) => {
   }, []);
   return (
     <div className="il-container">
-      {myProducts.map((prod) => {
+      {myProducts.map((prod) => (
         <Card
           key={prod.id}
           title={prod.title}
           price={prod.price}
           stock={prod.stock}
-        />;
-      })}
+        />
+      ))}
+      ;
     </div>
   );
 };
